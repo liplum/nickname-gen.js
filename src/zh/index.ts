@@ -1,4 +1,4 @@
-import { NicknameGenerator } from "..";
+import { NicknameGenerator, WordCandiates } from "..";
 import { Random } from 'random'
 
 export const createGenerator = (options?: {
@@ -7,12 +7,29 @@ export const createGenerator = (options?: {
   const { seed } = options ?? {}
   const rand = new Random(seed)
 
+  const getWord = (word: WordCandiates)=>{
+    if(typeof word === "string"){
+      return word
+    }
+    return rand.choice(word)
+  }
+
   return {
-    generateSVO: ({ subjects, verbs, objects }) => {
-      const s = rand.choice(subjects)
-      const v = rand.choice(verbs)
-      const o = rand.choice(objects)
+    generateAdjNoun: ({ adjective, noun, }) => {
+      const adj = getWord(adjective)
+      const n = getWord(noun)
+      return `${adj}${n}`
+    },
+    generateSVtO: ({ subject, transitivieVerb, object }) => {
+      const s = getWord(subject)
+      const v = getWord(transitivieVerb)
+      const o = getWord(object)
       return `${s}${v}${o}`
+    },
+    generateSVi: ({ subject, intransitiveVerb }) => {
+      const s = getWord(subject)
+      const v = getWord(intransitiveVerb)
+      return `${s}${v}`
     }
   }
 }
