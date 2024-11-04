@@ -15,18 +15,18 @@ export const createGenerator = (options?: {
   }
 
   return {
-    generateAdjNoun: ({ adjective, noun, }) => {
+    genAdjNoun: ({ adjective, noun, }) => {
       const adj = getWord(adjective)
       const n = getWord(noun)
       return `${adj}${n}`
     },
-    generateSVtO: ({ subject, transitivieVerb, object }) => {
+    genSVtO: ({ subject, transitivieVerb, object }) => {
       const s = getWord(subject)
       const v = getWord(transitivieVerb)
       const o = getWord(object)
       return `${s}${v}${o}`
     },
-    generateSVi: ({ subject, intransitiveVerb }) => {
+    genSVi: ({ subject, intransitiveVerb }) => {
       const s = getWord(subject)
       const v = getWord(intransitiveVerb)
       return `${s}${v}`
