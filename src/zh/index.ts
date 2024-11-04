@@ -1,4 +1,4 @@
-import { NicknameGenerator, WordCandiates } from "..";
+import { NicknameGenerator, WordCandiates } from "../index.js";
 import { Random } from 'random'
 
 export const createGenerator = (options?: {

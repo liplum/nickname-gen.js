@@ -1,6 +1,6 @@
 {
   "name": "@liplum/nickname-gen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate nicknames",
   "main": "dist/index.js",
   "type": "module",
