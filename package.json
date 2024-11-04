@@ -10,7 +10,9 @@
     "dist"
   ],
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./zh": "./dist/zh/index.js",
+    "./zh/default": "./dist/zh/default.js"
   },
   "scripts": {
     "build": "tsc",
@@ -36,7 +38,9 @@
   "keywords": [
     "nickname"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "random": "^5.1.1"
+  },
   "packageManager": "pnpm@9.9.0",
   "ava": {
     "files": [
