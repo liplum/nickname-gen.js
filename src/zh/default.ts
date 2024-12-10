@@ -1,4 +1,4 @@
-import { merge } from "../utils"
+import { merge } from "../utils.js"
 
 export const nouns = {
   cuteAnimals: [

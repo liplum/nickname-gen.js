@@ -11,6 +11,7 @@
   ],
   "exports": {
     ".": "./dist/index.js",
+    "./utils": "./dist/zh/utils.js",
     "./zh": "./dist/zh/index.js",
     "./zh/default": "./dist/zh/default.js"
   },
