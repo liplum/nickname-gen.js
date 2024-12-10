@@ -1,3 +1,5 @@
+import { merge } from "../utils"
+
 export const nouns = {
   cuteAnimals: [
     "小猫咪",
@@ -33,6 +35,9 @@ export const nouns = {
     "红酒",
     "椰子水",
     "热可可",
+    "果汁",
+    "豆浆",
+    "牛奶",
   ],
   foods: [
     "汉堡包",
@@ -89,18 +94,53 @@ export const adjectives = {
     "幸福的",
     "快乐的",
     "沉迷学习的",
-  ]
+    "乐于助人的",
+    "品学兼优的",
+    "通情达理的",
+    "仗义的",
+    "刻苦的",
+    "沉着的",
+    "坚韧的",
+    "坚强的",
+    "坚毅的",
+    "节俭的",
+    "谨慎的",
+    "成熟的",
+    "大方的",
+    "果断的",
+    "果敢的",
+    "耿直的",
+    "健谈的",
+    "豁达的",
+    "浪漫的",
+    "可爱的",
+    "热心的",
+    "稳重的",
+    "细致的",
+  ],
+  neutral: [
+    "含蓄的",
+    "害羞的",
+    "倔强的",
+  ],
 }
 
-export const transitivieVerb = {
+export const transitiveVerb = {
 
 }
 
-export const intransitivieVerb = {
+export const intransitiveVerb = {
   enjoyable: [
     "想去外太空",
     "爱玩游戏",
     "原地转圈圈",
     "想要旅行",
   ]
+}
+
+export const all = {
+  nouns: merge(nouns),
+  adjectives: merge(adjectives),
+  transitiveVerb: merge(transitiveVerb),
+  intransitiveVerb: merge(intransitiveVerb),
 }

@@ -1,20 +1,20 @@
 export type WordSet = string[]
-export type WordCandiates = WordSet | string
+export type WordCandidates = WordSet | string
 
 export interface NicknameGenerator {
   genAdjNoun: (params: {
-    adjective: WordCandiates,
-    noun: WordCandiates
+    adjective: WordCandidates,
+    noun: WordCandidates
   }) => string
 
   genSVtO: (params: {
-    subject: WordCandiates
-    transitivieVerb: WordCandiates
-    object: WordCandiates
+    subject: WordCandidates
+    transitiveVerb: WordCandidates
+    object: WordCandidates
   }) => string
   
   genSVi: (params: {
-    subject: WordCandiates
-    intransitiveVerb: WordCandiates
+    subject: WordCandidates
+    intransitiveVerb: WordCandidates
   }) => string
 }
